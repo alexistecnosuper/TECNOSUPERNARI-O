@@ -1,0 +1,25 @@
+.navbar {
+    background: #792ede;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.navbar input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+}
+
+.user-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

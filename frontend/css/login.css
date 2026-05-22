@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #792ede, #9f5cff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h1 {
+    margin-bottom: 10px;
+    color: #792ede;
+}
+
+.card p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px;
+    background: #792ede;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card button:hover {
+    background: #5e23b6;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* PASSWORD ICON */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+}
+
+.password-container span {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* ERRORES */
+small {
+    color: red;
+    display: block;
+    text-align: left;
+}
+
+/* LOADER */
+.loader {
+    border: 4px solid #eee;
+    border-top: 4px solid #792ede;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

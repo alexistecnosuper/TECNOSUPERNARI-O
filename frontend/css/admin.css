@@ -1,0 +1,288 @@
+header {
+    background: #792ede;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btnLogout {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.formulario {
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.formulario input,
+.formulario select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#preview {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+}
+
+#productos-admin {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto-admin {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.producto-admin:hover {
+    transform: translateY(-5px);
+}
+
+/* 🖼 IMÁGENES PRODUCTOS ADMIN */
+
+.producto-admin img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto 10px;
+
+    border-radius: 10px;
+    background: #f5f5f5;
+    padding: 10px;
+}
+
+/* LAYOUT */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background: #1e1e2f;
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    background: transparent;
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    text-align: left;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    background: #792ede;
+}
+
+
+/* CONTENIDO */
+
+.contenido-admin {
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* SECCIONES */
+
+.seccion-admin {
+    animation: fade 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inventario-admin {
+    margin-top: 20px;
+}
+
+#buscadorInventario {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* DASHBOARD */
+
+.dashboard-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+
+    margin: 20px 0;
+}
+
+.card-dashboard {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+.card-dashboard p {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #792ede;
+}
+
+.dashboard-box {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-top: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* PEDIDOS ADMIN */
+
+#lista-pedidos-admin {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.pedido-admin {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.pedido-admin h3 {
+
+    color: #792ede;
+
+    margin-bottom: 10px;
+}
+
+.productos-pedido {
+
+    margin-top: 10px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #ddd;
+}
+
+/* INVENTARIO PRO */
+
+#inventario-pro {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.card-inventario {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-inventario h3 {
+
+    color: #792ede;
+
+    margin-bottom: 10px;
+}

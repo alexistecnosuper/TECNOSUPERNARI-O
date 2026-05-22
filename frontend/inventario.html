@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/inventario.css">
+</head>
+<body>
+
+<h2>Inventario</h2>
+<input type="text" id="buscador" placeholder="Buscar producto o ciudad...">
+<h3>Registrar Movimiento</h3>
+
+<form id="form-movimiento">
+    <input type="number" id="producto_id" placeholder="ID Producto" required>
+    
+    <select id="tipo">
+        <option value="entrada">Entrada</option>
+        <option value="salida">Salida</option>
+    </select>
+
+    <input type="number" id="cantidad" placeholder="Cantidad" required>
+
+    <input type="text" id="ciudad" placeholder="Ciudad" required>
+
+    <button type="submit">Guardar</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Ciudad</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody id="tabla-inventario"></tbody>
+</table>
+
+<script src="js/inventario.js"></script>
+
+</body>
+</html>

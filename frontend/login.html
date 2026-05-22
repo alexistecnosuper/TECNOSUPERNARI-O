@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - TecnoSuper</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="card">
+
+    <img src="img/logo.png" class="logo">
+
+    <h1>TecnoSuper</h1>
+    <p>Inicia sesión para continuar</p>
+
+    <input type="email" id="email" placeholder="Correo electrónico">
+    <small id="errorEmail"></small>
+
+    <div class="password-container">
+        <input type="password" id="password" placeholder="Contraseña">
+        <span id="togglePassword">👁</span>
+    </div>
+    <small id="errorPassword"></small>
+
+    <button id="btnLogin">Ingresar</button>
+    <a href="register.html">
+        Crear cuenta
+    </a>
+
+    <div id="loader" class="loader hidden"></div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

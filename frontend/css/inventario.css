@@ -1,0 +1,19 @@
+.stock-0 {
+    background: #ff4d4d;
+    color: white;
+}
+
+.stock-bajo {
+    background: #ffcccc;
+}
+
+.stock-ok {
+    background: #ccffcc;
+}
+
+#form-movimiento {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

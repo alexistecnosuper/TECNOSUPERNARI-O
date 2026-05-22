@@ -1,0 +1,44 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.producto strong {
+    color: #792ede;
+    font-size: 18px;
+}
+
+#filtros {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    justify-content: center;
+}
+
+#filtros input,
+#filtros select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}

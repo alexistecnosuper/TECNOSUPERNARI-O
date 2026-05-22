@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin - TecnoSuper</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>TecnoSuper 👑</h2>
+
+        <button onclick="mostrarSeccion('dashboard')">
+            📊 Dashboard
+        </button>
+
+        <button onclick="mostrarSeccion('productos')">
+            📦 Productos
+        </button>
+
+        <button onclick="mostrarSeccion('usuarios')">
+            👥 Usuarios
+        </button>
+
+        <button onclick="mostrarSeccion('pedidos')">
+            🧾 Pedidos
+        </button>
+
+        <button onclick="mostrarSeccion('inventario')">
+            🏪 Inventario
+        </button>
+
+        <button onclick="mostrarSeccion('configuracion')">
+            ⚙️Configuración
+        </button>
+
+        <button id="btnLogout">
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+    <main class="contenido-admin">
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="seccion-admin">
+
+            <h1>Dashboard 📊</h1>
+
+            <!-- CARDS -->
+            <div class="dashboard-cards">
+
+                <div class="card-dashboard">
+                    <h3>📦 Productos</h3>
+                    <p id="totalProductos">0</p>
+                </div>
+
+                <div class="card-dashboard">
+                    <h3>👥 Usuarios</h3>
+                    <p id="totalUsuarios">0</p>
+                </div>
+
+                <div class="card-dashboard">
+                    <h3>🧾 Pedidos</h3>
+                    <p id="totalPedidos">0</p>
+                </div>
+
+                <div class="card-dashboard">
+                    <h3>💰 Ventas</h3>
+                    <p id="totalVentas">$0</p>
+                </div>
+
+            </div>
+
+
+            <!-- STOCK BAJO -->
+            <div class="dashboard-box">
+
+                <h2>⚠️ Stock Bajo</h2>
+                <div id="stockBajo"></div>
+            </div>
+
+
+            <!-- PEDIDOS -->
+            <div class="dashboard-box">
+                <h2>🧾 Últimos Pedidos</h2>
+                <div id="ultimosPedidos"></div>
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="seccion-admin hidden">
+
+            <h1>Productos 📦</h1>
+
+            <!-- TU FORMULARIO -->
+            <div class="formulario">
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre del producto"
+                >
+
+                <textarea
+                    id="descripcion"
+                    placeholder="Descripción"
+                ></textarea>
+
+                <input
+                    type="number"
+                    id="precio"
+                    placeholder="Precio"
+                >
+
+                <input
+                    type="number"
+                    id="stock"
+                    placeholder="Stock"
+                >
+
+                <select id="categoria"></select>
+
+                <input
+                    type="file"
+                    id="imagen"
+                >
+
+                <img
+                    id="preview"
+                    src="https://via.placeholder.com/150"
+                    width="150"
+                >
+
+                <button id="btnCrear">
+                    Crear Producto
+                </button>
+
+            </div>
+
+            <!-- PRODUCTOS -->
+            <div id="productos-admin"></div>
+
+        </section>
+
+
+        <!-- USUARIOS -->
+        <section id="usuarios" class="seccion-admin hidden">
+
+            <h1>Usuarios 👥</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabla-usuarios"></tbody>
+            </table>
+
+        </section>
+
+
+        <!-- INVENTARIO -->
+        <section id="inventario"
+            class="seccion-admin hidden">
+
+            <h1>Inventario 🏪</h1>
+
+            <div id="inventario-pro"></div>
+
+        </section>
+
+        <!-- PEDIDOS -->
+        <section id="pedidos"
+            class="seccion-admin hidden">
+
+            <h1>Pedidos 🧾</h1>
+            <div id="lista-pedidos-admin"></div>
+        </section>
+
+
+        <!-- CONFIGURACIÓN -->
+        <section id="configuracion"
+            class="seccion-admin hidden">
+
+            <h1>Configuración ⚙️</h1>
+            <!-- CATEGORÍAS -->
+            <div class="dashboard-box">
+                <h2>Categorías 📦</h2>
+                <input
+                    type="text"
+                    id="nuevaCategoria"
+                    placeholder="Nueva categoría"
+                >       
+
+                <button onclick="crearCategoria()">
+                    Crear
+                </button>
+
+                <div id="listaCategorias"></div>
+
+            </div>
+
+
+            <!-- CIUDADES -->
+            <div class="dashboard-box">
+
+                <h2>Ciudades 🏪</h2>
+
+                <input
+                    type="text"
+                    id="nuevaCiudad"
+                    placeholder="Nueva ciudad"
+                >
+
+                <button onclick="crearCiudad()">
+                    Crear
+                </button>
+
+                <div id="listaCiudades"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

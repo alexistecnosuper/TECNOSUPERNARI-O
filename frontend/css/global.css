@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #792ede;
+    color: white;
+}
